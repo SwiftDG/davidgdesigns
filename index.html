@@ -249,6 +249,7 @@ const root = document.documentElement;
 
 /* ---------------- list / floor mode ---------------- */
 const vp = $('#viewport'), floor = $('#floor'), rect = $('#rect');
+let started = true;
 const bList = $('#bList');
 function setList(on){
   root.classList.toggle('list', on);
@@ -445,7 +446,7 @@ $$('.paper').forEach(btn => btn.addEventListener('focus', ()=>{
   frameBox(x - 120, y - 120, w + 240, h + 240, 0.8);
 }));
 
-addEventListener('resize', apply);
+addEventListener('resize', ()=>{ if(floorMode() && !started) startView(); else apply(); });
 
 /* ---------------- case overlay ---------------- */
 const cs = $('#case'), cImg = $('#case-img'), strip = $('#case-strip');
@@ -504,22 +505,33 @@ addEventListener('keydown', e=>{
 });
 
 /* ---------------- start on MyLegacy ---------------- */
+/* If the tab is hidden or not laid out yet the viewport measures 0, which would
+   collapse the zoom to the minimum, so keep trying until it has a real size. */
+function startView(){
+  const w = vp.clientWidth, h = vp.clientHeight;
+  if(w < 2 || h < 2) return false;
+  const b = boxOf(clusters[0]);
+  const fit = Math.min(w / (b.w + 80), h / (b.h + 340)) * 0.9;
+  if(w < 860){
+    sc = clampS(Math.max(fit, w / 1050));
+    const f = boxOf($('#' + clusters[0].id + ' .piece'));
+    tx = w/2 - (b.x + f.x + f.w/2) * sc;
+    ty = h/2 - (b.y + f.y + f.h/2) * sc;
+  }else{
+    sc = clampS(fit);
+    tx = w/2 - (b.x + b.w/2) * sc;
+    ty = h/2 - (b.y - 300 + (b.h + 340)/2) * sc;
+  }
+  started = true;
+  apply();
+  return true;
+}
 if(floorMode()){
+  started = false;
   requestAnimationFrame(()=>{
-    const b = boxOf(clusters[0]);
-    const w = vp.clientWidth, h = vp.clientHeight;
-    const fit = Math.min(w / (b.w + 80), h / (b.h + 340)) * 0.9;
-    if(w < 860){
-      sc = clampS(Math.max(fit, w / 1050));
-      const f = boxOf($('#' + clusters[0].id + ' .piece'));
-      tx = w/2 - (b.x + f.x + f.w/2) * sc;
-      ty = h/2 - (b.y + f.y + f.h/2) * sc;
-    }else{
-      sc = clampS(fit);
-      tx = w/2 - (b.x + b.w/2) * sc;
-      ty = h/2 - (b.y - 300 + (b.h + 340)/2) * sc;
-    }
-    apply();
+    if(startView()) return;
+    const retry = setInterval(()=>{ if(startView()) clearInterval(retry); }, 200);
+    setTimeout(()=> clearInterval(retry), 8000);
   });
   if(matchMedia('(hover: none)').matches)
     hint.textContent = 'Drag to move around — pinch to zoom';
