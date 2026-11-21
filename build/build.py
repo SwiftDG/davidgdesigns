@@ -82,7 +82,7 @@ for n, b in enumerate(brands):
     clusters.append(
         f'<section class="cluster" id="{b["id"]}" aria-labelledby="{b["id"]}-h" '
         f'style="--x:{b["x"]}px;--y:{b["y"]}px;--w:{CLUSTER_W}px;--h:{b["h"]}px">'
-        f'<header class="chead"><p class="ckind">{n + 1:02d} — {e(b["kind"])}</p>'
+        f'<header class="chead"><p class="ckind">{n + 1:02d} &nbsp; {e(b["kind"])}</p>'
         f'<h2 id="{b["id"]}-h" class="cname">{e(b["title"])}</h2>'
         f'<p class="cdesc">{e(b["desc"])}</p></header>'
         f'<div class="pieces">{"".join(figs)}</div></section>')

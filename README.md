@@ -19,11 +19,11 @@ pieces and brings each into view, arrow keys pan, `+`/`-` zoom, Escape closes.
 
 `index.html` is generated. Do not hand-edit it; edit the source and rebuild:
 
-- `build/brands.json` — brand order, titles, kinds, descriptions and the pieces.
+- `build/brands.json`: brand order, titles, kinds, descriptions and the pieces.
   Brand order in this file is the order on the page; MyLegacy and SignalDesk
   are first.
-- `build/template.html` — the page shell, CSS and JavaScript.
-- `build/build.py` — computes the floor coordinates and writes `index.html`.
+- `build/template.html`: the page shell, CSS and JavaScript.
+- `build/build.py`: computes the floor coordinates and writes `index.html`.
 
 ```sh
 python3 build/build.py build/brands.json index.html build/template.html
