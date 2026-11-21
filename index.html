@@ -1,161 +1,530 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>David Gilbert | Graphic Design</title>
-<meta name="description" content="David Gilbert, graphic designer in Lagos. Creator branding, YouTube thumbnails, social and print design.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600&family=Lora:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>David Gilbert — Graphic Design Floor</title>
+<meta name="description" content="The studio floor of David Gilbert, graphic designer in Lagos. Drag across 45 pieces of brand, thumbnail, social and print design.">
+<meta name="theme-color" content="#0e0d0f">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#F4F1EB;--ink:#17171A;--soft:#5E5C58;--line:#DDD7CC;--accent:#B8542F}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font:400 17px/1.55 "Fira Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-a{color:inherit}
-.wrap{max-width:1240px;margin:0 auto;padding:0 28px}
-header.top{padding:64px 0 40px;border-bottom:1px solid var(--line)}
-.name{font:600 15px/1 "Fira Sans",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
-h1{font:500 clamp(34px,5.2vw,64px)/1.08 Lora,Georgia,serif;max-width:17ch;margin:22px 0 22px;letter-spacing:-.01em}
-.lede{max-width:60ch;color:var(--soft);font-size:18px}
-.meta{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:28px;font-size:15px;color:var(--soft)}
-.meta b{color:var(--ink);font-weight:600}
-nav.index{position:sticky;top:0;z-index:5;background:rgba(244,241,235,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
-nav.index .wrap{display:flex;gap:6px;overflow-x:auto;padding-top:12px;padding-bottom:12px;scrollbar-width:none}
-nav.index a{flex:none;text-decoration:none;font-size:14px;font-weight:500;padding:7px 14px;border:1px solid var(--line);border-radius:99px;background:#fff}
-nav.index a:hover{border-color:var(--ink)}
-section.project{padding:72px 0 24px;border-bottom:1px solid var(--line)}
-.phead{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:24px 56px;align-items:end;margin-bottom:32px}
-.phead h2{font:500 clamp(28px,3.4vw,42px)/1.1 Lora,Georgia,serif}
-.kind{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
-.phead p{color:var(--soft);max-width:58ch}
-.grid{columns:3 320px;column-gap:20px}
-.grid figure{break-inside:avoid;margin:0 0 20px;cursor:zoom-in}
-.grid img{display:block;width:100%;height:auto;background:#e8e3da;border-radius:4px;box-shadow:0 1px 0 rgba(0,0,0,.06)}
-.grid figcaption{font-size:13px;color:var(--soft);padding:8px 2px 0}
-footer{padding:56px 0 80px;color:var(--soft);font-size:15px}
-footer p{max-width:70ch;margin-bottom:10px}
-.lb{position:fixed;inset:0;background:rgba(14,14,16,.94);display:none;align-items:center;justify-content:center;z-index:20;padding:24px;cursor:zoom-out}
-.lb.on{display:flex}
-.lb img{max-width:100%;max-height:100%;object-fit:contain;border-radius:3px}
-@media (max-width:760px){.phead{grid-template-columns:1fr}header.top{padding-top:40px}section.project{padding-top:52px}}
+:root{
+  --bg:#0e0d0f; --paper:#f3f0ea; --ink:#141317; --accent:#f2a900;
+  --soft:rgba(243,240,234,.6); --hair:rgba(243,240,234,.16);
+  --ui:"Space Grotesk",ui-monospace,Menlo,monospace;
+  --dis:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;padding:0}
+html{background:var(--bg);-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--paper);font:400 16px/1.5 var(--ui);overflow-x:hidden}
+img{display:block;max-width:100%}
+ul{list-style:none;margin:0;padding:0}
+h1,h2,p,figure,figcaption{margin:0}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+a{color:inherit;text-decoration-color:var(--accent);text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip{position:fixed;left:12px;top:-60px;z-index:120;background:var(--accent);color:#1a1200;padding:10px 16px;font-weight:700;border-radius:2px}
+.skip:focus{top:12px}
+
+/* ---------- chrome ---------- */
+.bar{position:fixed;z-index:60;display:flex;gap:8px;align-items:center}
+.bar.tl{top:0;left:0;right:0;padding:14px 16px;justify-content:space-between;flex-wrap:wrap;
+  background:linear-gradient(to bottom,rgba(14,13,15,.92),rgba(14,13,15,0));pointer-events:none}
+.bar.tl>*{pointer-events:auto}
+.sig{display:flex;align-items:baseline;gap:10px;min-width:0}
+.sig b{font:800 17px/1 var(--dis);font-variation-settings:'wdth' 112;letter-spacing:.01em}
+.sig span{font-size:12.5px;color:var(--soft);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.btn{border:1px solid var(--hair);border-radius:999px;padding:8px 14px;font-size:13px;font-weight:500;
+  letter-spacing:.02em;background:rgba(20,19,23,.6);backdrop-filter:blur(8px);transition:.2s var(--ease)}
+.btn:hover{border-color:var(--paper)}
+.btn[aria-pressed="true"],.btn[aria-expanded="true"]{background:var(--accent);border-color:var(--accent);color:#1a1200}
+.tools{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+
+/* ---------- index + about panels ---------- */
+.panel{position:fixed;z-index:70;background:#141317;border:1px solid var(--hair);
+  border-radius:14px;padding:18px;overflow:auto;overscroll-behavior:contain}
+#index{left:16px;top:70px;bottom:92px;width:270px}
+#about{right:16px;top:70px;width:min(400px,calc(100vw - 32px));max-height:72vh}
+#about h2{font:800 20px/1.1 var(--dis);font-variation-settings:'wdth' 110;margin-bottom:12px}
+#about p{font-size:14px;color:var(--soft);margin-bottom:12px}
+#about p strong{color:var(--paper);font-weight:500}
+.jump{display:grid;grid-template-columns:28px 1fr auto;gap:10px;align-items:baseline;width:100%;
+  text-align:left;padding:9px 8px;border-radius:8px;transition:background .18s}
+.jump:hover,.jump.on{background:rgba(242,169,0,.14)}
+.jump.on .jt{color:var(--accent)}
+.jn{font-size:11px;color:var(--soft)}
+.jt{font:700 16px/1.15 var(--dis);font-variation-settings:'wdth' 105;letter-spacing:-.01em}
+.jc{font-size:11px;color:var(--soft)}
+.ptitle{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--soft);margin-bottom:8px}
+
+/* ---------- floor ---------- */
+#viewport{position:relative}
+#floor{position:relative}
+.cluster{position:relative;margin:0 auto 72px;max-width:1180px;padding:0 20px}
+.chead{margin-bottom:22px}
+.ckind{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.cname{font:800 clamp(38px,9vw,86px)/.92 var(--dis);font-variation-settings:'wdth' 118;
+  text-transform:uppercase;letter-spacing:-.02em;margin:6px 0 10px}
+.cdesc{font-size:14.5px;color:var(--soft);max-width:60ch}
+.pieces{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
+.piece{margin:0}
+.paper{display:block;width:100%;background:var(--paper);color:var(--ink);padding:12px 12px 0;
+  border-radius:3px;text-align:left}
+.paper img{width:100%;height:auto;background:#ddd8cf}
+.paper figcaption{font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;padding:9px 1px 10px;color:#55525c}
+
+/* ---------- canvas mode ---------- */
+html.js:not(.list) body{overflow:hidden;height:100%}
+html.js:not(.list) #viewport{position:fixed;inset:0;overflow:hidden;touch-action:none;cursor:grab;
+  background-image:radial-gradient(rgba(243,240,234,.07) 1.2px,transparent 1.2px);background-size:34px 34px}
+html.js:not(.list) #viewport.drag{cursor:grabbing}
+html.js:not(.list) #floor{position:absolute;left:0;top:0;width:10840px;height:10908px;
+  transform-origin:0 0;will-change:transform}
+html.js:not(.list) .cluster{position:absolute;left:var(--x);top:var(--y);width:var(--w);height:var(--h);
+  max-width:none;margin:0;padding:0}
+html.js:not(.list) .chead{position:absolute;left:0;bottom:calc(100% + 34px);width:var(--w)}
+html.js:not(.list) .ckind{font-size:20px}
+html.js:not(.list) .cname{font-size:150px;line-height:.86;color:transparent;
+  -webkit-text-stroke:2.5px var(--accent);margin:2px 0 12px}
+html.js:not(.list) .cdesc{font-size:22px;line-height:1.4;max-width:1500px}
+html.js:not(.list) .pieces{display:block}
+html.js:not(.list) .piece{position:absolute;left:var(--x);top:var(--y);width:calc(var(--w) + 32px);
+  transform:rotate(var(--rot));transition:transform .35s var(--ease);will-change:transform}
+html.js:not(.list) .paper{padding:16px 16px 0;box-shadow:0 18px 40px rgba(0,0,0,.45);
+  transition:box-shadow .35s var(--ease)}
+html.js:not(.list) .paper img{width:var(--w);height:var(--h)}
+html.js:not(.list) .paper figcaption{font-size:16px;padding:14px 2px 16px}
+html.js:not(.list) .piece:has(.paper:hover),html.js:not(.list) .piece:has(.paper:focus-visible){
+  transform:rotate(0deg) scale(1.035);z-index:3}
+html.js:not(.list) .piece:has(.paper:hover) .paper{box-shadow:0 30px 70px rgba(0,0,0,.6)}
+
+/* ---------- minimap, zoom, hint ---------- */
+#mini,#zoom,#hint{display:none}
+html.js:not(.list) #mini{display:block;position:fixed;right:16px;bottom:16px;z-index:60;width:170px;
+  border:1px solid var(--hair);border-radius:8px;background:rgba(20,19,23,.72);backdrop-filter:blur(8px);
+  padding:7px}
+#map{position:relative;overflow:hidden;width:100%;aspect-ratio:10840 / 10908}
+#map i{position:absolute;background:var(--hair);border-radius:1px;cursor:pointer}
+#map i:hover{background:var(--accent)}
+#rect{position:absolute;border:1.5px solid var(--accent);background:rgba(242,169,0,.12);
+  border-radius:2px;pointer-events:none}
+html.js:not(.list) #zoom{display:flex;position:fixed;left:16px;bottom:16px;z-index:60;gap:6px}
+#zoom .btn{width:40px;height:40px;padding:0;display:grid;place-items:center;font-size:17px}
+#zoom .btn.wide{width:auto;padding:0 14px;font-size:13px}
+html.js:not(.list) #hint{display:block;position:fixed;left:50%;bottom:22px;transform:translateX(-50%);
+  z-index:55;font-size:13px;color:var(--soft);background:rgba(20,19,23,.75);backdrop-filter:blur(8px);
+  border:1px solid var(--hair);border-radius:999px;padding:9px 18px;transition:opacity .5s;pointer-events:none}
+#hint.gone{opacity:0}
+
+/* ---------- case overlay ---------- */
+#case{position:fixed;inset:0;z-index:100;background:#0b0a0c;display:none;
+  grid-template-rows:auto minmax(0,1fr) auto;padding:14px;gap:12px}
+html.case .bar.tl,html.case #zoom,html.case #mini,html.case #hint,html.case .panel{display:none}
+#case.on{display:grid}
+.ctop{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.ctop h2{font:800 clamp(22px,4vw,40px)/1 var(--dis);font-variation-settings:'wdth' 115;text-transform:uppercase}
+.ctop .ckind{margin-bottom:4px}
+.ctop p.d{font-size:13.5px;color:var(--soft);max-width:70ch;margin-top:8px}
+.cstage{position:relative;min-height:0}
+.cstage img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;border-radius:3px}
+.cnav{position:absolute;inset:0;z-index:2;display:flex;justify-content:space-between;align-items:center;
+  pointer-events:none;padding:0 4px}
+.cnav .btn{pointer-events:auto;width:46px;height:46px;padding:0;display:grid;place-items:center;font-size:20px}
+.cbot{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.strip{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;flex:1;min-width:0}
+.strip button{flex:none;width:62px;height:46px;border:1px solid var(--hair);border-radius:4px;overflow:hidden;opacity:.5}
+.strip button[aria-current="true"]{opacity:1;border-color:var(--accent)}
+.strip img{width:100%;height:100%;object-fit:cover}
+.cmeta{font-size:12px;color:var(--soft)}
+
+/* ---------- list mode ---------- */
+html.list #viewport,html.no-js #viewport{padding:96px 0 0}
+html.list #floor{transform:none!important;width:auto!important;height:auto!important}
+#about.asfoot{position:static;width:auto;max-height:none;border:0;border-top:1px solid var(--hair);
+  border-radius:0;background:none;padding:40px 20px 70px;max-width:1180px;margin:30px auto 0}
+html.js:not(.list) #about.asfoot{position:fixed;max-width:none;border:1px solid var(--hair);
+  border-radius:14px;background:#141317;padding:18px;margin:0}
+
+@media (max-width:860px){
+  #index{left:8px;right:8px;width:auto;top:64px;bottom:auto;max-height:52vh}
+  html.js:not(.list) #mini{display:none}
+  .sig span{display:none}
+  html.js:not(.list) #hint{font-size:12px;padding:8px 14px;bottom:116px;max-width:calc(100vw - 32px)}
+  .btn{padding:7px 10px;font-size:11.5px}
+  .tools{gap:6px;flex-wrap:nowrap;width:100%}
+  .sig{flex-basis:100%;margin-bottom:8px}
+  .bar.tl{padding:12px}
+  #index{top:106px}
+  #about{top:106px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+}
 </style>
 </head>
 <body>
-<header class="top"><div class="wrap">
-<div class="name">David Gilbert</div>
-<h1>Graphic design for creators and the brands around them.</h1>
-<p class="lede">I design YouTube thumbnails, channel branding, social posts and print pieces. Every piece here is built around one clear idea, real licensed photography and type that still reads at phone size.</p>
-<div class="meta"><span><b>Based in</b> Lagos, Nigeria</span><span><b>Tools</b> Canva, Photoshop, Figma</span><span><b>Focus</b> Creator branding, thumbnails, social, print</span></div>
-</div></header>
-<nav class="index"><div class="wrap">
-<a href="#mylegacy">MyLegacy</a><a href="#signaldesk">SignalDesk</a><a href="#nullpoint">NullPoint</a><a href="#lecturenotes">Lecture Notes</a><a href="#sola">Sola & Saffron</a><a href="#forme">FORME</a><a href="#morrow">Morrow & Co.</a><a href="#pace">Pace</a><a href="#pulse">Pulse 27</a><a href="#serein">Serein</a><a href="#openfield">Openfield Learning</a><a href="#afterhours">After Hours Lagos</a></div></nav>
-<main>
-<section class="project" id="mylegacy"><div class="wrap">
-<div class="phead"><div><div class="kind">Creator platform</div><h2>MyLegacy</h2></div><p>Unofficial concept pack for MyLegacy Management. Logo and colours redrawn from their website; tagline is theirs. Not commissioned.</p></div>
-<div class="grid">
-<figure><img src="img/mylegacy/MyLegacy_Thumb_Creator.jpg" width="1280" height="720" loading="lazy" alt="MyLegacy: Thumb Creator"><figcaption>Thumb Creator</figcaption></figure>
-<figure><img src="img/mylegacy/MyLegacy_Promo_BuiltByCreators.jpg" width="1080" height="1080" loading="lazy" alt="MyLegacy: Promo BuiltByCreators"><figcaption>Promo BuiltByCreators</figcaption></figure>
-<figure><img src="img/mylegacy/MyLegacy_Carousel_Cover.jpg" width="1080" height="1350" loading="lazy" alt="MyLegacy: Carousel Cover"><figcaption>Carousel Cover</figcaption></figure>
-</div></div></section>
-<section class="project" id="signaldesk"><div class="wrap">
-<div class="phead"><div><div class="kind">Tech creator channel</div><h2>SignalDesk</h2></div><p>Concept channel. Thumbnails, identity, banner and social set built around one real photo per piece and a black and gold palette.</p></div>
-<div class="grid">
-<figure><img src="img/signaldesk/SignalDesk_Thumb_Authority.jpg" width="1280" height="720" loading="lazy" alt="SignalDesk: Thumb Authority"><figcaption>Thumb Authority</figcaption></figure>
-<figure><img src="img/signaldesk/SignalDesk_Thumb_Curiosity.jpg" width="1280" height="720" loading="lazy" alt="SignalDesk: Thumb Curiosity"><figcaption>Thumb Curiosity</figcaption></figure>
-<figure><img src="img/signaldesk/SignalDesk_Thumb_Story.jpg" width="1280" height="720" loading="lazy" alt="SignalDesk: Thumb Story"><figcaption>Thumb Story</figcaption></figure>
-<figure><img src="img/signaldesk/SignalDesk_Banner.jpg" width="1600" height="900" loading="lazy" alt="SignalDesk: Banner"><figcaption>Banner</figcaption></figure>
-<figure><img src="img/signaldesk/SignalDesk_Logo.jpg" width="800" height="800" loading="lazy" alt="SignalDesk: Logo"><figcaption>Logo</figcaption></figure>
-<figure><img src="img/signaldesk/SignalDesk_Promo_JustDropped.jpg" width="1080" height="1350" loading="lazy" alt="SignalDesk: Promo JustDropped"><figcaption>Promo JustDropped</figcaption></figure>
-<figure><img src="img/signaldesk/SignalDesk_Promo_ShipPoster.jpg" width="1080" height="1350" loading="lazy" alt="SignalDesk: Promo ShipPoster"><figcaption>Promo ShipPoster</figcaption></figure>
-<figure><img src="img/signaldesk/SignalDesk_Promo_ThisWeek_Story.jpg" width="900" height="1600" loading="lazy" alt="SignalDesk: Promo ThisWeek Story"><figcaption>Promo ThisWeek Story</figcaption></figure>
-</div></div></section>
-<section class="project" id="nullpoint"><div class="wrap">
-<div class="phead"><div><div class="kind">Gaming channel</div><h2>NullPoint</h2></div><p>Concept channel. A ring-and-dot mark, heavy grotesk type and one red accent.</p></div>
-<div class="grid">
-<figure><img src="img/nullpoint/NullPoint_Thumb_YoureWrong.jpg" width="1280" height="720" loading="lazy" alt="NullPoint: Thumb YoureWrong"><figcaption>Thumb YoureWrong</figcaption></figure>
-<figure><img src="img/nullpoint/NullPoint_Thumb_Glitch.jpg" width="1280" height="720" loading="lazy" alt="NullPoint: Thumb Glitch"><figcaption>Thumb Glitch</figcaption></figure>
-<figure><img src="img/nullpoint/NullPoint_Thumb_LostOnPurpose.jpg" width="1280" height="720" loading="lazy" alt="NullPoint: Thumb LostOnPurpose"><figcaption>Thumb LostOnPurpose</figcaption></figure>
-<figure><img src="img/nullpoint/NullPoint_Banner.jpg" width="1600" height="900" loading="lazy" alt="NullPoint: Banner"><figcaption>Banner</figcaption></figure>
-<figure><img src="img/nullpoint/NullPoint_Logo.jpg" width="800" height="800" loading="lazy" alt="NullPoint: Logo"><figcaption>Logo</figcaption></figure>
-</div></div></section>
-<section class="project" id="lecturenotes"><div class="wrap">
-<div class="phead"><div><div class="kind">Study channel</div><h2>Lecture Notes</h2></div><p>Concept channel. Paper, ink and a highlighter stroke that marks the key word, the way students mark notes.</p></div>
-<div class="grid">
-<figure><img src="img/lecturenotes/LectureNotes_Thumb_Method.jpg" width="1280" height="720" loading="lazy" alt="Lecture Notes: Thumb Method"><figcaption>Thumb Method</figcaption></figure>
-<figure><img src="img/lecturenotes/LectureNotes_Thumb_Mistakes.jpg" width="1280" height="720" loading="lazy" alt="Lecture Notes: Thumb Mistakes"><figcaption>Thumb Mistakes</figcaption></figure>
-<figure><img src="img/lecturenotes/LectureNotes_Thumb_Study.jpg" width="1280" height="720" loading="lazy" alt="Lecture Notes: Thumb Study"><figcaption>Thumb Study</figcaption></figure>
-<figure><img src="img/lecturenotes/LectureNotes_Banner.jpg" width="1600" height="900" loading="lazy" alt="Lecture Notes: Banner"><figcaption>Banner</figcaption></figure>
-<figure><img src="img/lecturenotes/LectureNotes_Logo.jpg" width="800" height="800" loading="lazy" alt="Lecture Notes: Logo"><figcaption>Logo</figcaption></figure>
-</div></div></section>
-<section class="project" id="sola"><div class="wrap">
-<div class="phead"><div><div class="kind">Restaurant, Lagos</div><h2>Sola & Saffron</h2></div><p>Concept brand for a modern Nigerian kitchen. Menu, logo and a dish-of-the-day post.</p></div>
-<div class="grid">
-<figure><img src="img/sola/SOLA_Menu_A4.jpg" width="1131" height="1600" loading="lazy" alt="Sola & Saffron: Menu A4"><figcaption>Menu A4</figcaption></figure>
-<figure><img src="img/sola/SOLA_Social_Post.jpg" width="1080" height="1350" loading="lazy" alt="Sola & Saffron: Social Post"><figcaption>Social Post</figcaption></figure>
-<figure><img src="img/sola/SOLA_Logo.jpg" width="800" height="800" loading="lazy" alt="Sola & Saffron: Logo"><figcaption>Logo</figcaption></figure>
-</div></div></section>
-<section class="project" id="forme"><div class="wrap">
-<div class="phead"><div><div class="kind">Fashion</div><h2>FORME</h2></div><p>Concept brand. Hang tag designed and applied to a garment photo, plus a product post.</p></div>
-<div class="grid">
-<figure><img src="img/forme/FORME_HangTag.jpg" width="1131" height="1600" loading="lazy" alt="FORME: HangTag"><figcaption>HangTag</figcaption></figure>
-<figure><img src="img/forme/FORME_Social_Post.jpg" width="1080" height="1350" loading="lazy" alt="FORME: Social Post"><figcaption>Social Post</figcaption></figure>
-<figure><img src="img/forme/FORME_Logo.jpg" width="800" height="800" loading="lazy" alt="FORME: Logo"><figcaption>Logo</figcaption></figure>
-</div></div></section>
-<section class="project" id="morrow"><div class="wrap">
-<div class="phead"><div><div class="kind">Real estate</div><h2>Morrow & Co.</h2></div><p>Concept brand. Property flyer and listing post for a fictional house.</p></div>
-<div class="grid">
-<figure><img src="img/morrow/MORROW_Property_Flyer_A4.jpg" width="1131" height="1600" loading="lazy" alt="Morrow & Co.: Property Flyer A4"><figcaption>Property Flyer A4</figcaption></figure>
-<figure><img src="img/morrow/MORROW_Social_Post.jpg" width="1080" height="1350" loading="lazy" alt="Morrow & Co.: Social Post"><figcaption>Social Post</figcaption></figure>
-<figure><img src="img/morrow/MORROW_Logo.jpg" width="800" height="800" loading="lazy" alt="Morrow & Co.: Logo"><figcaption>Logo</figcaption></figure>
-</div></div></section>
-<section class="project" id="pace"><div class="wrap">
-<div class="phead"><div><div class="kind">Fintech app</div><h2>Pace</h2></div><p>Concept brand. App home screen designed and placed on a phone photo, plus a launch post.</p></div>
-<div class="grid">
-<figure><img src="img/pace/PACE_Onboarding_Banner.jpg" width="1200" height="628" loading="lazy" alt="Pace: Onboarding Banner"><figcaption>Onboarding Banner</figcaption></figure>
-<figure><img src="img/pace/PACE_Social_Post.jpg" width="1080" height="1350" loading="lazy" alt="Pace: Social Post"><figcaption>Social Post</figcaption></figure>
-<figure><img src="img/pace/PACE_Logo.jpg" width="800" height="800" loading="lazy" alt="Pace: Logo"><figcaption>Logo</figcaption></figure>
-</div></div></section>
-<section class="project" id="pulse"><div class="wrap">
-<div class="phead"><div><div class="kind">Fitness gym</div><h2>Pulse 27</h2></div><p>Concept brand. Weekly class schedule and an intro-pass post.</p></div>
-<div class="grid">
-<figure><img src="img/pulse/PULSE_Class_Schedule_A4.jpg" width="1131" height="1600" loading="lazy" alt="Pulse 27: Class Schedule A4"><figcaption>Class Schedule A4</figcaption></figure>
-<figure><img src="img/pulse/PULSE_Social_Post.jpg" width="1080" height="1350" loading="lazy" alt="Pulse 27: Social Post"><figcaption>Social Post</figcaption></figure>
-<figure><img src="img/pulse/PULSE_Logo.jpg" width="800" height="800" loading="lazy" alt="Pulse 27: Logo"><figcaption>Logo</figcaption></figure>
-</div></div></section>
-<section class="project" id="serein"><div class="wrap">
-<div class="phead"><div><div class="kind">Skin studio</div><h2>Serein</h2></div><p>Concept brand. Treatment menu with a labelled product shot, and a product post.</p></div>
-<div class="grid">
-<figure><img src="img/serein/SEREIN_Price_List_A4.jpg" width="1131" height="1600" loading="lazy" alt="Serein: Price List A4"><figcaption>Price List A4</figcaption></figure>
-<figure><img src="img/serein/SEREIN_Social_Post.jpg" width="1080" height="1350" loading="lazy" alt="Serein: Social Post"><figcaption>Social Post</figcaption></figure>
-<figure><img src="img/serein/SEREIN_Logo.jpg" width="800" height="800" loading="lazy" alt="Serein: Logo"><figcaption>Logo</figcaption></figure>
-</div></div></section>
-<section class="project" id="openfield"><div class="wrap">
-<div class="phead"><div><div class="kind">Education centre</div><h2>Openfield Learning</h2></div><p>Concept brand. Admissions flyer and an open-day post.</p></div>
-<div class="grid">
-<figure><img src="img/openfield/OPENFIELD_Admissions_Flyer_A4.jpg" width="1131" height="1600" loading="lazy" alt="Openfield Learning: Admissions Flyer A4"><figcaption>Admissions Flyer A4</figcaption></figure>
-<figure><img src="img/openfield/OPENFIELD_Social_Post.jpg" width="1080" height="1350" loading="lazy" alt="Openfield Learning: Social Post"><figcaption>Social Post</figcaption></figure>
-<figure><img src="img/openfield/OPENFIELD_Logo.jpg" width="800" height="800" loading="lazy" alt="Openfield Learning: Logo"><figcaption>Logo</figcaption></figure>
-</div></div></section>
-<section class="project" id="afterhours"><div class="wrap">
-<div class="phead"><div><div class="kind">Event</div><h2>After Hours Lagos</h2></div><p>Concept event. Ticket, story post and logo. Event details are fictional.</p></div>
-<div class="grid">
-<figure><img src="img/afterhours/AFTER_HOURS_Social_Story.jpg" width="900" height="1600" loading="lazy" alt="After Hours Lagos: HOURS Social Story"><figcaption>HOURS Social Story</figcaption></figure>
-<figure><img src="img/afterhours/AFTER_HOURS_Ticket.jpg" width="1600" height="608" loading="lazy" alt="After Hours Lagos: HOURS Ticket"><figcaption>HOURS Ticket</figcaption></figure>
-<figure><img src="img/afterhours/AFTER_HOURS_Logo.jpg" width="800" height="800" loading="lazy" alt="After Hours Lagos: HOURS Logo"><figcaption>HOURS Logo</figcaption></figure>
-</div></div></section>
-</main>
-<footer><div class="wrap">
-<p>All brands on this page are self-initiated concept work unless stated, and are not paid client projects. MyLegacy is an unofficial concept made for an application to MyLegacy Management.</p>
-<p>Photography is licensed from Pexels (free for commercial use) and edited for each piece.</p>
-<p>&copy; 2026 David Gilbert</p>
-</div></footer>
-<div class="lb" id="lb"><img alt=""></div>
+<a class="skip" href="#viewport">Skip to the work</a>
+
+<div class="bar tl">
+  <div class="sig"><b>David Gilbert</b><span>Graphic design — Lagos — 45 pieces, 12 brands</span></div>
+  <div class="tools">
+    <button class="btn" id="bIndex" aria-expanded="false" aria-controls="index">Index</button>
+    <button class="btn" id="bAbout" aria-expanded="false" aria-controls="about">About</button>
+    <button class="btn" id="bList" aria-pressed="false">List view</button>
+    <a class="btn" href="https://sarcdg.dev">Developer site</a>
+  </div>
+</div>
+
+<nav class="panel" id="index" hidden aria-label="Brands">
+  <p class="ptitle">Jump to</p>
+  <ul><li><button type="button" class="jump" data-to="mylegacy"><span class="jn">01</span><span class="jt">MyLegacy</span><span class="jc">3</span></button></li><li><button type="button" class="jump" data-to="signaldesk"><span class="jn">02</span><span class="jt">SignalDesk</span><span class="jc">8</span></button></li><li><button type="button" class="jump" data-to="nullpoint"><span class="jn">03</span><span class="jt">NullPoint</span><span class="jc">5</span></button></li><li><button type="button" class="jump" data-to="lecturenotes"><span class="jn">04</span><span class="jt">Lecture Notes</span><span class="jc">5</span></button></li><li><button type="button" class="jump" data-to="sola"><span class="jn">05</span><span class="jt">Sola &amp; Saffron</span><span class="jc">3</span></button></li><li><button type="button" class="jump" data-to="forme"><span class="jn">06</span><span class="jt">FORME</span><span class="jc">3</span></button></li><li><button type="button" class="jump" data-to="morrow"><span class="jn">07</span><span class="jt">Morrow &amp; Co.</span><span class="jc">3</span></button></li><li><button type="button" class="jump" data-to="pace"><span class="jn">08</span><span class="jt">Pace</span><span class="jc">3</span></button></li><li><button type="button" class="jump" data-to="pulse"><span class="jn">09</span><span class="jt">Pulse 27</span><span class="jc">3</span></button></li><li><button type="button" class="jump" data-to="serein"><span class="jn">10</span><span class="jt">Serein</span><span class="jc">3</span></button></li><li><button type="button" class="jump" data-to="openfield"><span class="jn">11</span><span class="jt">Openfield Learning</span><span class="jc">3</span></button></li><li><button type="button" class="jump" data-to="afterhours"><span class="jn">12</span><span class="jt">After Hours Lagos</span><span class="jc">3</span></button></li></ul>
+</nav>
+
+<div id="viewport">
+  <div id="floor">
+<section class="cluster" id="mylegacy" aria-labelledby="mylegacy-h" style="--x:700px;--y:1040px;--w:2600px;--h:763px"><header class="chead"><p class="ckind">01 — Creator platform</p><h2 id="mylegacy-h" class="cname">MyLegacy</h2><p class="cdesc">Unofficial concept pack for MyLegacy Management. Logo and colours redrawn from their website; tagline is theirs. Not commissioned.</p></header><div class="pieces"><figure class="piece" style="--x:0px;--y:30px;--w:780px;--h:439px;--rot:2.2deg"><button type="button" class="paper" data-brand="mylegacy" data-i="0" aria-label="Open Thumb Creator, MyLegacy"><img src="img/mylegacy/MyLegacy_Thumb_Creator.jpg" width="780" height="439" loading="lazy" decoding="async" alt="MyLegacy: Thumb Creator"><figcaption>Thumb Creator</figcaption></button></figure><figure class="piece" style="--x:908px;--y:30px;--w:440px;--h:440px;--rot:-1.1deg"><button type="button" class="paper" data-brand="mylegacy" data-i="1" aria-label="Open Promo BuiltByCreators, MyLegacy"><img src="img/mylegacy/MyLegacy_Promo_BuiltByCreators.jpg" width="440" height="440" loading="lazy" decoding="async" alt="MyLegacy: Promo BuiltByCreators"><figcaption>Promo BuiltByCreators</figcaption></button></figure><figure class="piece" style="--x:1476px;--y:-20px;--w:540px;--h:675px;--rot:-2.2deg"><button type="button" class="paper" data-brand="mylegacy" data-i="2" aria-label="Open Carousel Cover, MyLegacy"><img src="img/mylegacy/MyLegacy_Carousel_Cover.jpg" width="540" height="675" loading="lazy" decoding="async" alt="MyLegacy: Carousel Cover"><figcaption>Carousel Cover</figcaption></button></figure></div></section>
+<section class="cluster" id="signaldesk" aria-labelledby="signaldesk-h" style="--x:4120px;--y:1040px;--w:2600px;--h:2145px"><header class="chead"><p class="ckind">02 — Tech creator channel</p><h2 id="signaldesk-h" class="cname">SignalDesk</h2><p class="cdesc">Concept channel. Thumbnails, identity, banner and social set built around one real photo per piece and a black and gold palette.</p></header><div class="pieces"><figure class="piece" style="--x:0px;--y:30px;--w:780px;--h:439px;--rot:0.0deg"><button type="button" class="paper" data-brand="signaldesk" data-i="0" aria-label="Open Thumb Authority, SignalDesk"><img src="img/signaldesk/SignalDesk_Thumb_Authority.jpg" width="780" height="439" loading="lazy" decoding="async" alt="SignalDesk: Thumb Authority"><figcaption>Thumb Authority</figcaption></button></figure><figure class="piece" style="--x:908px;--y:-30px;--w:780px;--h:439px;--rot:0.0deg"><button type="button" class="paper" data-brand="signaldesk" data-i="1" aria-label="Open Thumb Curiosity, SignalDesk"><img src="img/signaldesk/SignalDesk_Thumb_Curiosity.jpg" width="780" height="439" loading="lazy" decoding="async" alt="SignalDesk: Thumb Curiosity"><figcaption>Thumb Curiosity</figcaption></button></figure><figure class="piece" style="--x:0px;--y:653px;--w:780px;--h:439px;--rot:-1.1deg"><button type="button" class="paper" data-brand="signaldesk" data-i="2" aria-label="Open Thumb Story, SignalDesk"><img src="img/signaldesk/SignalDesk_Thumb_Story.jpg" width="780" height="439" loading="lazy" decoding="async" alt="SignalDesk: Thumb Story"><figcaption>Thumb Story</figcaption></button></figure><figure class="piece" style="--x:908px;--y:633px;--w:780px;--h:439px;--rot:-2.2deg"><button type="button" class="paper" data-brand="signaldesk" data-i="3" aria-label="Open Banner, SignalDesk"><img src="img/signaldesk/SignalDesk_Banner.jpg" width="780" height="439" loading="lazy" decoding="async" alt="SignalDesk: Banner"><figcaption>Banner</figcaption></button></figure><figure class="piece" style="--x:1816px;--y:613px;--w:440px;--h:440px;--rot:1.1deg"><button type="button" class="paper" data-brand="signaldesk" data-i="4" aria-label="Open Logo, SignalDesk"><img src="img/signaldesk/SignalDesk_Logo.jpg" width="440" height="440" loading="lazy" decoding="async" alt="SignalDesk: Logo"><figcaption>Logo</figcaption></button></figure><figure class="piece" style="--x:0px;--y:1257px;--w:540px;--h:675px;--rot:-0.55deg"><button type="button" class="paper" data-brand="signaldesk" data-i="5" aria-label="Open Promo JustDropped, SignalDesk"><img src="img/signaldesk/SignalDesk_Promo_JustDropped.jpg" width="540" height="675" loading="lazy" decoding="async" alt="SignalDesk: Promo JustDropped"><figcaption>Promo JustDropped</figcaption></button></figure><figure class="piece" style="--x:668px;--y:1227px;--w:540px;--h:675px;--rot:-1.65deg"><button type="button" class="paper" data-brand="signaldesk" data-i="6" aria-label="Open Promo ShipPoster, SignalDesk"><img src="img/signaldesk/SignalDesk_Promo_ShipPoster.jpg" width="540" height="675" loading="lazy" decoding="async" alt="SignalDesk: Promo ShipPoster"><figcaption>Promo ShipPoster</figcaption></button></figure><figure class="piece" style="--x:1336px;--y:1237px;--w:450px;--h:800px;--rot:1.65deg"><button type="button" class="paper" data-brand="signaldesk" data-i="7" aria-label="Open Promo ThisWeek Story, SignalDesk"><img src="img/signaldesk/SignalDesk_Promo_ThisWeek_Story.jpg" width="450" height="800" loading="lazy" decoding="async" alt="SignalDesk: Promo ThisWeek Story"><figcaption>Promo ThisWeek Story</figcaption></button></figure></div></section>
+<section class="cluster" id="nullpoint" aria-labelledby="nullpoint-h" style="--x:7540px;--y:1040px;--w:2600px;--h:1160px"><header class="chead"><p class="ckind">03 — Gaming channel</p><h2 id="nullpoint-h" class="cname">NullPoint</h2><p class="cdesc">Concept channel. A ring-and-dot mark, heavy grotesk type and one red accent.</p></header><div class="pieces"><figure class="piece" style="--x:0px;--y:0px;--w:780px;--h:439px;--rot:-0.55deg"><button type="button" class="paper" data-brand="nullpoint" data-i="0" aria-label="Open Thumb YoureWrong, NullPoint"><img src="img/nullpoint/NullPoint_Thumb_YoureWrong.jpg" width="780" height="439" loading="lazy" decoding="async" alt="NullPoint: Thumb YoureWrong"><figcaption>Thumb YoureWrong</figcaption></button></figure><figure class="piece" style="--x:908px;--y:-20px;--w:780px;--h:439px;--rot:2.2deg"><button type="button" class="paper" data-brand="nullpoint" data-i="1" aria-label="Open Thumb Glitch, NullPoint"><img src="img/nullpoint/NullPoint_Thumb_Glitch.jpg" width="780" height="439" loading="lazy" decoding="async" alt="NullPoint: Thumb Glitch"><figcaption>Thumb Glitch</figcaption></button></figure><figure class="piece" style="--x:0px;--y:653px;--w:780px;--h:439px;--rot:1.1deg"><button type="button" class="paper" data-brand="nullpoint" data-i="2" aria-label="Open Thumb LostOnPurpose, NullPoint"><img src="img/nullpoint/NullPoint_Thumb_LostOnPurpose.jpg" width="780" height="439" loading="lazy" decoding="async" alt="NullPoint: Thumb LostOnPurpose"><figcaption>Thumb LostOnPurpose</figcaption></button></figure><figure class="piece" style="--x:908px;--y:653px;--w:780px;--h:439px;--rot:-0.55deg"><button type="button" class="paper" data-brand="nullpoint" data-i="3" aria-label="Open Banner, NullPoint"><img src="img/nullpoint/NullPoint_Banner.jpg" width="780" height="439" loading="lazy" decoding="async" alt="NullPoint: Banner"><figcaption>Banner</figcaption></button></figure><figure class="piece" style="--x:1816px;--y:623px;--w:440px;--h:440px;--rot:-2.2deg"><button type="button" class="paper" data-brand="nullpoint" data-i="4" aria-label="Open Logo, NullPoint"><img src="img/nullpoint/NullPoint_Logo.jpg" width="440" height="440" loading="lazy" decoding="async" alt="NullPoint: Logo"><figcaption>Logo</figcaption></button></figure></div></section>
+<section class="cluster" id="lecturenotes" aria-labelledby="lecturenotes-h" style="--x:700px;--y:4465px;--w:2600px;--h:1141px"><header class="chead"><p class="ckind">04 — Study channel</p><h2 id="lecturenotes-h" class="cname">Lecture Notes</h2><p class="cdesc">Concept channel. Paper, ink and a highlighter stroke that marks the key word, the way students mark notes.</p></header><div class="pieces"><figure class="piece" style="--x:0px;--y:10px;--w:780px;--h:439px;--rot:-2.2deg"><button type="button" class="paper" data-brand="lecturenotes" data-i="0" aria-label="Open Thumb Method, Lecture Notes"><img src="img/lecturenotes/LectureNotes_Thumb_Method.jpg" width="780" height="439" loading="lazy" decoding="async" alt="Lecture Notes: Thumb Method"><figcaption>Thumb Method</figcaption></button></figure><figure class="piece" style="--x:908px;--y:20px;--w:780px;--h:439px;--rot:-2.2deg"><button type="button" class="paper" data-brand="lecturenotes" data-i="1" aria-label="Open Thumb Mistakes, Lecture Notes"><img src="img/lecturenotes/LectureNotes_Thumb_Mistakes.jpg" width="780" height="439" loading="lazy" decoding="async" alt="Lecture Notes: Thumb Mistakes"><figcaption>Thumb Mistakes</figcaption></button></figure><figure class="piece" style="--x:0px;--y:633px;--w:780px;--h:439px;--rot:1.1deg"><button type="button" class="paper" data-brand="lecturenotes" data-i="2" aria-label="Open Thumb Study, Lecture Notes"><img src="img/lecturenotes/LectureNotes_Thumb_Study.jpg" width="780" height="439" loading="lazy" decoding="async" alt="Lecture Notes: Thumb Study"><figcaption>Thumb Study</figcaption></button></figure><figure class="piece" style="--x:908px;--y:623px;--w:780px;--h:439px;--rot:2.2deg"><button type="button" class="paper" data-brand="lecturenotes" data-i="3" aria-label="Open Banner, Lecture Notes"><img src="img/lecturenotes/LectureNotes_Banner.jpg" width="780" height="439" loading="lazy" decoding="async" alt="Lecture Notes: Banner"><figcaption>Banner</figcaption></button></figure><figure class="piece" style="--x:1816px;--y:613px;--w:440px;--h:440px;--rot:1.65deg"><button type="button" class="paper" data-brand="lecturenotes" data-i="4" aria-label="Open Logo, Lecture Notes"><img src="img/lecturenotes/LectureNotes_Logo.jpg" width="440" height="440" loading="lazy" decoding="async" alt="Lecture Notes: Logo"><figcaption>Logo</figcaption></button></figure></div></section>
+<section class="cluster" id="sola" aria-labelledby="sola-h" style="--x:4120px;--y:4465px;--w:2600px;--h:804px"><header class="chead"><p class="ckind">05 — Restaurant, Lagos</p><h2 id="sola-h" class="cname">Sola &amp; Saffron</h2><p class="cdesc">Concept brand for a modern Nigerian kitchen. Menu, logo and a dish-of-the-day post.</p></header><div class="pieces"><figure class="piece" style="--x:0px;--y:0px;--w:520px;--h:736px;--rot:0.55deg"><button type="button" class="paper" data-brand="sola" data-i="0" aria-label="Open Menu A4, Sola &amp; Saffron"><img src="img/sola/SOLA_Menu_A4.jpg" width="520" height="736" loading="lazy" decoding="async" alt="Sola &amp; Saffron: Menu A4"><figcaption>Menu A4</figcaption></button></figure><figure class="piece" style="--x:648px;--y:-30px;--w:540px;--h:675px;--rot:0.55deg"><button type="button" class="paper" data-brand="sola" data-i="1" aria-label="Open Social Post, Sola &amp; Saffron"><img src="img/sola/SOLA_Social_Post.jpg" width="540" height="675" loading="lazy" decoding="async" alt="Sola &amp; Saffron: Social Post"><figcaption>Social Post</figcaption></button></figure><figure class="piece" style="--x:1316px;--y:-10px;--w:440px;--h:440px;--rot:2.2deg"><button type="button" class="paper" data-brand="sola" data-i="2" aria-label="Open Logo, Sola &amp; Saffron"><img src="img/sola/SOLA_Logo.jpg" width="440" height="440" loading="lazy" decoding="async" alt="Sola &amp; Saffron: Logo"><figcaption>Logo</figcaption></button></figure></div></section>
+<section class="cluster" id="forme" aria-labelledby="forme-h" style="--x:7540px;--y:4465px;--w:2600px;--h:834px"><header class="chead"><p class="ckind">06 — Fashion</p><h2 id="forme-h" class="cname">FORME</h2><p class="cdesc">Concept brand. Hang tag designed and applied to a garment photo, plus a product post.</p></header><div class="pieces"><figure class="piece" style="--x:0px;--y:-30px;--w:520px;--h:736px;--rot:0.0deg"><button type="button" class="paper" data-brand="forme" data-i="0" aria-label="Open HangTag, FORME"><img src="img/forme/FORME_HangTag.jpg" width="520" height="736" loading="lazy" decoding="async" alt="FORME: HangTag"><figcaption>HangTag</figcaption></button></figure><figure class="piece" style="--x:648px;--y:10px;--w:540px;--h:675px;--rot:-2.2deg"><button type="button" class="paper" data-brand="forme" data-i="1" aria-label="Open Social Post, FORME"><img src="img/forme/FORME_Social_Post.jpg" width="540" height="675" loading="lazy" decoding="async" alt="FORME: Social Post"><figcaption>Social Post</figcaption></button></figure><figure class="piece" style="--x:1316px;--y:-20px;--w:440px;--h:440px;--rot:0.0deg"><button type="button" class="paper" data-brand="forme" data-i="2" aria-label="Open Logo, FORME"><img src="img/forme/FORME_Logo.jpg" width="440" height="440" loading="lazy" decoding="async" alt="FORME: Logo"><figcaption>Logo</figcaption></button></figure></div></section>
+<section class="cluster" id="morrow" aria-labelledby="morrow-h" style="--x:700px;--y:6886px;--w:2600px;--h:804px"><header class="chead"><p class="ckind">07 — Real estate</p><h2 id="morrow-h" class="cname">Morrow &amp; Co.</h2><p class="cdesc">Concept brand. Property flyer and listing post for a fictional house.</p></header><div class="pieces"><figure class="piece" style="--x:0px;--y:0px;--w:520px;--h:736px;--rot:-0.55deg"><button type="button" class="paper" data-brand="morrow" data-i="0" aria-label="Open Property Flyer A4, Morrow &amp; Co."><img src="img/morrow/MORROW_Property_Flyer_A4.jpg" width="520" height="736" loading="lazy" decoding="async" alt="Morrow &amp; Co.: Property Flyer A4"><figcaption>Property Flyer A4</figcaption></button></figure><figure class="piece" style="--x:648px;--y:10px;--w:540px;--h:675px;--rot:1.65deg"><button type="button" class="paper" data-brand="morrow" data-i="1" aria-label="Open Social Post, Morrow &amp; Co."><img src="img/morrow/MORROW_Social_Post.jpg" width="540" height="675" loading="lazy" decoding="async" alt="Morrow &amp; Co.: Social Post"><figcaption>Social Post</figcaption></button></figure><figure class="piece" style="--x:1316px;--y:-30px;--w:440px;--h:440px;--rot:-0.55deg"><button type="button" class="paper" data-brand="morrow" data-i="2" aria-label="Open Logo, Morrow &amp; Co."><img src="img/morrow/MORROW_Logo.jpg" width="440" height="440" loading="lazy" decoding="async" alt="Morrow &amp; Co.: Logo"><figcaption>Logo</figcaption></button></figure></div></section>
+<section class="cluster" id="pace" aria-labelledby="pace-h" style="--x:4120px;--y:6886px;--w:2600px;--h:773px"><header class="chead"><p class="ckind">08 — Fintech app</p><h2 id="pace-h" class="cname">Pace</h2><p class="cdesc">Concept brand. App home screen designed and placed on a phone photo, plus a launch post.</p></header><div class="pieces"><figure class="piece" style="--x:0px;--y:-10px;--w:780px;--h:408px;--rot:-2.2deg"><button type="button" class="paper" data-brand="pace" data-i="0" aria-label="Open Onboarding Banner, Pace"><img src="img/pace/PACE_Onboarding_Banner.jpg" width="780" height="408" loading="lazy" decoding="async" alt="Pace: Onboarding Banner"><figcaption>Onboarding Banner</figcaption></button></figure><figure class="piece" style="--x:908px;--y:-30px;--w:540px;--h:675px;--rot:-0.55deg"><button type="button" class="paper" data-brand="pace" data-i="1" aria-label="Open Social Post, Pace"><img src="img/pace/PACE_Social_Post.jpg" width="540" height="675" loading="lazy" decoding="async" alt="Pace: Social Post"><figcaption>Social Post</figcaption></button></figure><figure class="piece" style="--x:1576px;--y:30px;--w:440px;--h:440px;--rot:1.1deg"><button type="button" class="paper" data-brand="pace" data-i="2" aria-label="Open Logo, Pace"><img src="img/pace/PACE_Logo.jpg" width="440" height="440" loading="lazy" decoding="async" alt="Pace: Logo"><figcaption>Logo</figcaption></button></figure></div></section>
+<section class="cluster" id="pulse" aria-labelledby="pulse-h" style="--x:7540px;--y:6886px;--w:2600px;--h:804px"><header class="chead"><p class="ckind">09 — Fitness gym</p><h2 id="pulse-h" class="cname">Pulse 27</h2><p class="cdesc">Concept brand. Weekly class schedule and an intro-pass post.</p></header><div class="pieces"><figure class="piece" style="--x:0px;--y:0px;--w:520px;--h:736px;--rot:-0.55deg"><button type="button" class="paper" data-brand="pulse" data-i="0" aria-label="Open Class Schedule A4, Pulse 27"><img src="img/pulse/PULSE_Class_Schedule_A4.jpg" width="520" height="736" loading="lazy" decoding="async" alt="Pulse 27: Class Schedule A4"><figcaption>Class Schedule A4</figcaption></button></figure><figure class="piece" style="--x:648px;--y:10px;--w:540px;--h:675px;--rot:0.0deg"><button type="button" class="paper" data-brand="pulse" data-i="1" aria-label="Open Social Post, Pulse 27"><img src="img/pulse/PULSE_Social_Post.jpg" width="540" height="675" loading="lazy" decoding="async" alt="Pulse 27: Social Post"><figcaption>Social Post</figcaption></button></figure><figure class="piece" style="--x:1316px;--y:-30px;--w:440px;--h:440px;--rot:-1.65deg"><button type="button" class="paper" data-brand="pulse" data-i="2" aria-label="Open Logo, Pulse 27"><img src="img/pulse/PULSE_Logo.jpg" width="440" height="440" loading="lazy" decoding="async" alt="Pulse 27: Logo"><figcaption>Logo</figcaption></button></figure></div></section>
+<section class="cluster" id="serein" aria-labelledby="serein-h" style="--x:700px;--y:8970px;--w:2600px;--h:834px"><header class="chead"><p class="ckind">10 — Skin studio</p><h2 id="serein-h" class="cname">Serein</h2><p class="cdesc">Concept brand. Treatment menu with a labelled product shot, and a product post.</p></header><div class="pieces"><figure class="piece" style="--x:0px;--y:-30px;--w:520px;--h:736px;--rot:-1.1deg"><button type="button" class="paper" data-brand="serein" data-i="0" aria-label="Open Price List A4, Serein"><img src="img/serein/SEREIN_Price_List_A4.jpg" width="520" height="736" loading="lazy" decoding="async" alt="Serein: Price List A4"><figcaption>Price List A4</figcaption></button></figure><figure class="piece" style="--x:648px;--y:-30px;--w:540px;--h:675px;--rot:-0.55deg"><button type="button" class="paper" data-brand="serein" data-i="1" aria-label="Open Social Post, Serein"><img src="img/serein/SEREIN_Social_Post.jpg" width="540" height="675" loading="lazy" decoding="async" alt="Serein: Social Post"><figcaption>Social Post</figcaption></button></figure><figure class="piece" style="--x:1316px;--y:0px;--w:440px;--h:440px;--rot:2.2deg"><button type="button" class="paper" data-brand="serein" data-i="2" aria-label="Open Logo, Serein"><img src="img/serein/SEREIN_Logo.jpg" width="440" height="440" loading="lazy" decoding="async" alt="Serein: Logo"><figcaption>Logo</figcaption></button></figure></div></section>
+<section class="cluster" id="openfield" aria-labelledby="openfield-h" style="--x:4120px;--y:8970px;--w:2600px;--h:834px"><header class="chead"><p class="ckind">11 — Education centre</p><h2 id="openfield-h" class="cname">Openfield Learning</h2><p class="cdesc">Concept brand. Admissions flyer and an open-day post.</p></header><div class="pieces"><figure class="piece" style="--x:0px;--y:-30px;--w:520px;--h:736px;--rot:0.0deg"><button type="button" class="paper" data-brand="openfield" data-i="0" aria-label="Open Admissions Flyer A4, Openfield Learning"><img src="img/openfield/OPENFIELD_Admissions_Flyer_A4.jpg" width="520" height="736" loading="lazy" decoding="async" alt="Openfield Learning: Admissions Flyer A4"><figcaption>Admissions Flyer A4</figcaption></button></figure><figure class="piece" style="--x:648px;--y:20px;--w:540px;--h:675px;--rot:0.55deg"><button type="button" class="paper" data-brand="openfield" data-i="1" aria-label="Open Social Post, Openfield Learning"><img src="img/openfield/OPENFIELD_Social_Post.jpg" width="540" height="675" loading="lazy" decoding="async" alt="Openfield Learning: Social Post"><figcaption>Social Post</figcaption></button></figure><figure class="piece" style="--x:1316px;--y:-10px;--w:440px;--h:440px;--rot:2.2deg"><button type="button" class="paper" data-brand="openfield" data-i="2" aria-label="Open Logo, Openfield Learning"><img src="img/openfield/OPENFIELD_Logo.jpg" width="440" height="440" loading="lazy" decoding="async" alt="Openfield Learning: Logo"><figcaption>Logo</figcaption></button></figure></div></section>
+<section class="cluster" id="afterhours" aria-labelledby="afterhours-h" style="--x:7540px;--y:8970px;--w:2600px;--h:898px"><header class="chead"><p class="ckind">12 — Event</p><h2 id="afterhours-h" class="cname">After Hours Lagos</h2><p class="cdesc">Concept event. Ticket, story post and logo. Event details are fictional.</p></header><div class="pieces"><figure class="piece" style="--x:0px;--y:-30px;--w:450px;--h:800px;--rot:1.65deg"><button type="button" class="paper" data-brand="afterhours" data-i="0" aria-label="Open HOURS Social Story, After Hours Lagos"><img src="img/afterhours/AFTER_HOURS_Social_Story.jpg" width="450" height="800" loading="lazy" decoding="async" alt="After Hours Lagos: HOURS Social Story"><figcaption>HOURS Social Story</figcaption></button></figure><figure class="piece" style="--x:578px;--y:-10px;--w:880px;--h:334px;--rot:1.1deg"><button type="button" class="paper" data-brand="afterhours" data-i="1" aria-label="Open HOURS Ticket, After Hours Lagos"><img src="img/afterhours/AFTER_HOURS_Ticket.jpg" width="880" height="334" loading="lazy" decoding="async" alt="After Hours Lagos: HOURS Ticket"><figcaption>HOURS Ticket</figcaption></button></figure><figure class="piece" style="--x:1586px;--y:10px;--w:440px;--h:440px;--rot:0.0deg"><button type="button" class="paper" data-brand="afterhours" data-i="2" aria-label="Open HOURS Logo, After Hours Lagos"><img src="img/afterhours/AFTER_HOURS_Logo.jpg" width="440" height="440" loading="lazy" decoding="async" alt="After Hours Lagos: HOURS Logo"><figcaption>HOURS Logo</figcaption></button></figure></div></section>
+  </div>
+</div>
+
+<div id="mini" aria-hidden="true"><div id="map"><i style="left:6.46%;top:9.53%;width:23.99%;height:6.99%" data-to="mylegacy"></i><i style="left:38.01%;top:9.53%;width:23.99%;height:19.66%" data-to="signaldesk"></i><i style="left:69.56%;top:9.53%;width:23.99%;height:10.63%" data-to="nullpoint"></i><i style="left:6.46%;top:40.93%;width:23.99%;height:10.46%" data-to="lecturenotes"></i><i style="left:38.01%;top:40.93%;width:23.99%;height:7.37%" data-to="sola"></i><i style="left:69.56%;top:40.93%;width:23.99%;height:7.65%" data-to="forme"></i><i style="left:6.46%;top:63.13%;width:23.99%;height:7.37%" data-to="morrow"></i><i style="left:38.01%;top:63.13%;width:23.99%;height:7.09%" data-to="pace"></i><i style="left:69.56%;top:63.13%;width:23.99%;height:7.37%" data-to="pulse"></i><i style="left:6.46%;top:82.23%;width:23.99%;height:7.65%" data-to="serein"></i><i style="left:38.01%;top:82.23%;width:23.99%;height:7.65%" data-to="openfield"></i><i style="left:69.56%;top:82.23%;width:23.99%;height:8.23%" data-to="afterhours"></i><div id="rect"></div></div></div>
+
+<div id="zoom">
+  <button class="btn" id="zOut" aria-label="Zoom out">&minus;</button>
+  <button class="btn" id="zIn" aria-label="Zoom in">+</button>
+  <button class="btn wide" id="zFit">Fit all</button>
+</div>
+
+<p id="hint">Drag to move around — scroll to pan, ctrl + scroll to zoom</p>
+
+<footer class="panel asfoot" id="about" hidden>
+  <h2>About this work</h2>
+  <p><strong>All brands here are self-initiated concept work, not paid client projects.</strong> MyLegacy is an unofficial concept made for an application to MyLegacy Management; its logo and colours are redrawn from their website and the tagline is theirs.</p>
+  <p>Photography is licensed from Pexels, free for commercial use, and edited for each piece. The photographs are not mine.</p>
+  <p>Built by David Gilbert in Lagos. <a href="https://sarcdg.dev">sarcdg.dev</a> — <a href="mailto:israelizuchukwu17382302@gmail.com">email</a> — <a href="https://wa.me/2347068349199">WhatsApp</a></p>
+  <p>&copy; 2026 David Gilbert</p>
+</footer>
+
+<div id="case" role="dialog" aria-modal="true" aria-labelledby="case-h" hidden>
+  <div class="ctop">
+    <div><p class="ckind" id="case-k"></p><h2 id="case-h"></h2><p class="d" id="case-d"></p></div>
+    <button class="btn" id="cClose">Close &times;</button>
+  </div>
+  <div class="cstage">
+    <img id="case-img" alt="">
+    <div class="cnav">
+      <button class="btn" id="cPrev" aria-label="Previous piece">&#8249;</button>
+      <button class="btn" id="cNext" aria-label="Next piece">&#8250;</button>
+    </div>
+  </div>
+  <div class="cbot">
+    <div class="strip" id="case-strip"></div>
+    <p class="cmeta">Concept work — photography licensed from Pexels</p>
+  </div>
+</div>
+
 <script>
-const lb=document.getElementById('lb'),li=lb.querySelector('img');
-document.querySelectorAll('.grid figure').forEach(f=>f.addEventListener('click',()=>{const i=f.querySelector('img');li.src=i.src;li.alt=i.alt;lb.classList.add('on')}));
-lb.addEventListener('click',()=>lb.classList.remove('on'));
-document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+document.documentElement.classList.replace('no-js','js');
+const META = {"mylegacy":{"t":"MyLegacy","k":"Creator platform","d":"Unofficial concept pack for MyLegacy Management. Logo and colours redrawn from their website; tagline is theirs. Not commissioned."},"signaldesk":{"t":"SignalDesk","k":"Tech creator channel","d":"Concept channel. Thumbnails, identity, banner and social set built around one real photo per piece and a black and gold palette."},"nullpoint":{"t":"NullPoint","k":"Gaming channel","d":"Concept channel. A ring-and-dot mark, heavy grotesk type and one red accent."},"lecturenotes":{"t":"Lecture Notes","k":"Study channel","d":"Concept channel. Paper, ink and a highlighter stroke that marks the key word, the way students mark notes."},"sola":{"t":"Sola & Saffron","k":"Restaurant, Lagos","d":"Concept brand for a modern Nigerian kitchen. Menu, logo and a dish-of-the-day post."},"forme":{"t":"FORME","k":"Fashion","d":"Concept brand. Hang tag designed and applied to a garment photo, plus a product post."},"morrow":{"t":"Morrow & Co.","k":"Real estate","d":"Concept brand. Property flyer and listing post for a fictional house."},"pace":{"t":"Pace","k":"Fintech app","d":"Concept brand. App home screen designed and placed on a phone photo, plus a launch post."},"pulse":{"t":"Pulse 27","k":"Fitness gym","d":"Concept brand. Weekly class schedule and an intro-pass post."},"serein":{"t":"Serein","k":"Skin studio","d":"Concept brand. Treatment menu with a labelled product shot, and a product post."},"openfield":{"t":"Openfield Learning","k":"Education centre","d":"Concept brand. Admissions flyer and an open-day post."},"afterhours":{"t":"After Hours Lagos","k":"Event","d":"Concept event. Ticket, story post and logo. Event details are fictional."}};
+const WORLD = {w:10840, h:10908};
+const $ = (s,r=document)=>r.querySelector(s);
+const $$ = (s,r=document)=>[...r.querySelectorAll(s)];
+const reduce = matchMedia('(prefers-reduced-motion: reduce)');
+const root = document.documentElement;
+
+/* ---------------- list / floor mode ---------------- */
+const vp = $('#viewport'), floor = $('#floor'), rect = $('#rect');
+const bList = $('#bList');
+function setList(on){
+  root.classList.toggle('list', on);
+  bList.setAttribute('aria-pressed', String(on));
+  bList.textContent = on ? 'Floor view' : 'List view';
+  try{ localStorage.setItem('dg-view', on ? 'list' : 'floor'); }catch(e){}
+  if(on){ floor.style.transform = ''; scrollTo(0, 0); } else { apply(); }
+}
+try{ if(localStorage.getItem('dg-view') === 'list') setList(true); }catch(e){}
+bList.addEventListener('click', ()=> setList(!root.classList.contains('list')));
+const floorMode = ()=> !root.classList.contains('list');
+
+/* ---------------- panels ---------------- */
+function panel(btn, el){
+  btn.addEventListener('click', ()=>{
+    const open = el.hidden;
+    el.hidden = !open;
+    btn.setAttribute('aria-expanded', String(open));
+    if(open) el.querySelector('button, a')?.focus();
+  });
+}
+panel($('#bIndex'), $('#index'));
+panel($('#bAbout'), $('#about'));
+addEventListener('keydown', e=>{
+  if(e.key !== 'Escape') return;
+  for(const [b,p] of [[$('#bIndex'),$('#index')],[$('#bAbout'),$('#about')]]){
+    if(!p.hidden){ p.hidden = true; b.setAttribute('aria-expanded','false'); b.focus(); }
+  }
+});
+
+/* ---------------- the floor ---------------- */
+let tx = 0, ty = 0, sc = 0.42, raf = 0;
+const MIN = 0.06, MAX = 1.1;
+const clampS = v => Math.min(MAX, Math.max(MIN, v));
+
+function apply(){
+  if(!floorMode()) return;
+  const w = vp.clientWidth, h = vp.clientHeight;
+  const ww = WORLD.w * sc, wh = WORLD.h * sc;
+  const padX = Math.min(w * 0.6, ww * 0.5), padY = Math.min(h * 0.6, wh * 0.5);
+  tx = Math.min(padX, Math.max(w - ww - padX, tx));
+  ty = Math.min(padY, Math.max(h - wh - padY, ty));
+  floor.style.transform = `translate3d(${tx.toFixed(1)}px, ${ty.toFixed(1)}px, 0) scale(${sc})`;
+  rect.style.cssText = `left:${(-tx/sc)/WORLD.w*100}%;top:${(-ty/sc)/WORLD.h*100}%;` +
+    `width:${(w/sc)/WORLD.w*100}%;height:${(h/sc)/WORLD.h*100}%`;
+  markNear();
+}
+function zoomAt(cx, cy, next){
+  const s2 = clampS(next);
+  tx = cx - (cx - tx) * (s2 / sc);
+  ty = cy - (cy - ty) * (s2 / sc);
+  sc = s2; apply();
+}
+
+/* animated fly-to */
+let fly = 0;
+function flyTo(x, y, s, done){
+  cancelAnimationFrame(fly);
+  s = clampS(s);
+  const x0 = tx, y0 = ty, s0 = sc, t0 = performance.now();
+  const dur = reduce.matches ? 0 : 620;
+  if(!dur){ tx = x; ty = y; sc = s; apply(); done?.(); return; }
+  const step = now => {
+    const k = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - k, 3);
+    tx = x0 + (x - x0) * e; ty = y0 + (y - y0) * e; sc = s0 + (s - s0) * e;
+    apply();
+    if(k < 1) fly = requestAnimationFrame(step); else done?.();
+  };
+  fly = requestAnimationFrame(step);
+}
+function frameBox(bx, by, bw, bh, fill = 0.82){
+  const w = vp.clientWidth, h = vp.clientHeight;
+  const s = clampS(Math.min(w / bw, h / bh) * fill);
+  flyTo(w/2 - (bx + bw/2) * s, h/2 - (by + bh/2) * s, s);
+}
+function boxOf(el){
+  const x = parseFloat(el.style.getPropertyValue('--x')), y = parseFloat(el.style.getPropertyValue('--y'));
+  const w = parseFloat(el.style.getPropertyValue('--w')), h = parseFloat(el.style.getPropertyValue('--h'));
+  return {x, y, w, h};
+}
+function goBrand(id){
+  const c = document.getElementById(id);
+  if(!floorMode()){ c.scrollIntoView({behavior: reduce.matches ? 'auto' : 'smooth'}); return; }
+  const b = boxOf(c);
+  frameBox(b.x - 40, b.y - 300, b.w + 80, b.h + 340, 0.9);
+}
+$$('.jump').forEach(b => b.addEventListener('click', ()=> goBrand(b.dataset.to)));
+$$('#map i').forEach(i => i.addEventListener('click', ()=> goBrand(i.dataset.to)));
+
+/* which brand is centred -> highlight in the index */
+const clusters = $$('.cluster');
+function markNear(){
+  if(!floorMode()) return;
+  const cx = (-tx + vp.clientWidth/2) / sc, cy = (-ty + vp.clientHeight/2) / sc;
+  let best = null, bd = Infinity;
+  clusters.forEach(c => {
+    const b = boxOf(c), d = Math.hypot(b.x + b.w/2 - cx, b.y + b.h/2 - cy);
+    if(d < bd){ bd = d; best = c.id; }
+  });
+  $$('.jump').forEach(j => j.classList.toggle('on', j.dataset.to === best));
+}
+
+/* drag with inertia */
+const hint = $('#hint');
+let down = null, moved = 0, vx = 0, vy = 0, glide = 0;
+const pts = new Map();
+let pinch = null;
+
+vp.addEventListener('pointerdown', e=>{
+  if(!floorMode() || e.button) return;
+  pts.set(e.pointerId, {x:e.clientX, y:e.clientY});
+  cancelAnimationFrame(glide); cancelAnimationFrame(fly);
+  if(pts.size === 2){
+    const [a,b] = [...pts.values()];
+    pinch = {d: Math.hypot(a.x-b.x, a.y-b.y), s: sc,
+             cx: (a.x+b.x)/2, cy: (a.y+b.y)/2};
+    down = null; return;
+  }
+  down = {x:e.clientX, y:e.clientY, tx, ty, t:performance.now(), cap:false};
+  moved = 0; vx = vy = 0;
+});
+vp.addEventListener('pointermove', e=>{
+  if(!pts.has(e.pointerId)) return;
+  pts.set(e.pointerId, {x:e.clientX, y:e.clientY});
+  if(pinch && pts.size === 2){
+    const [a,b] = [...pts.values()];
+    zoomAt(pinch.cx, pinch.cy, pinch.s * (Math.hypot(a.x-b.x, a.y-b.y) / pinch.d));
+    return;
+  }
+  if(!down) return;
+  const dx = e.clientX - down.x, dy = e.clientY - down.y;
+  moved = Math.max(moved, Math.abs(dx) + Math.abs(dy));
+  if(moved < 5) return;
+  if(!down.cap){ down.cap = true; vp.setPointerCapture(e.pointerId); vp.classList.add('drag'); }
+  const dt = Math.max(1, performance.now() - down.t);
+  vx = (down.tx + dx - tx) / dt * 16; vy = (down.ty + dy - ty) / dt * 16;
+  down.t = performance.now();
+  tx = down.tx + dx; ty = down.ty + dy;
+  apply();
+  if(moved > 30) hint.classList.add('gone');
+});
+function release(e){
+  pts.delete(e.pointerId);
+  if(pts.size < 2) pinch = null;
+  if(!down) return;
+  const wasDrag = down.cap;
+  down = null; vp.classList.remove('drag');
+  if(!wasDrag || reduce.matches || Math.hypot(vx, vy) < 2) return;
+  const step = ()=>{
+    vx *= 0.93; vy *= 0.93;
+    tx += vx; ty += vy; apply();
+    if(Math.hypot(vx, vy) > 0.4) glide = requestAnimationFrame(step);
+  };
+  glide = requestAnimationFrame(step);
+}
+vp.addEventListener('pointerup', release);
+vp.addEventListener('pointercancel', release);
+
+vp.addEventListener('wheel', e=>{
+  if(!floorMode()) return;
+  e.preventDefault();
+  hint.classList.add('gone');
+  if(e.ctrlKey || e.metaKey){
+    zoomAt(e.clientX, e.clientY, sc * Math.exp(-e.deltaY * 0.0022));
+  }else{
+    const k = e.deltaMode === 1 ? 30 : 1;
+    tx -= e.deltaX * k; ty -= e.deltaY * k; apply();
+  }
+}, {passive:false});
+
+$('#zIn').addEventListener('click', ()=> zoomAt(vp.clientWidth/2, vp.clientHeight/2, sc * 1.45));
+$('#zOut').addEventListener('click', ()=> zoomAt(vp.clientWidth/2, vp.clientHeight/2, sc / 1.45));
+$('#zFit').addEventListener('click', ()=> frameBox(0, 0, WORLD.w, WORLD.h, 0.94));
+
+addEventListener('keydown', e=>{
+  if(!floorMode() || !$('#case').hidden) return;
+  if(/^(INPUT|TEXTAREA)$/.test(e.target.tagName)) return;
+  const step = e.shiftKey ? 600 : 220;
+  const k = {ArrowLeft:[step,0], ArrowRight:[-step,0], ArrowUp:[0,step], ArrowDown:[0,-step]}[e.key];
+  if(k){ e.preventDefault(); tx += k[0]; ty += k[1]; apply(); hint.classList.add('gone'); }
+  if(e.key === '+' || e.key === '='){ zoomAt(vp.clientWidth/2, vp.clientHeight/2, sc * 1.4); }
+  if(e.key === '-'){ zoomAt(vp.clientWidth/2, vp.clientHeight/2, sc / 1.4); }
+});
+
+/* keyboard tabbing through pieces brings them into view */
+$$('.paper').forEach(btn => btn.addEventListener('focus', ()=>{
+  if(!floorMode()) return;
+  const fig = btn.parentElement, cl = fig.closest('.cluster');
+  const f = boxOf(fig), c = boxOf(cl);
+  const x = c.x + f.x, y = c.y + f.y;
+  const w = f.w + 32, h = f.h + 68;
+  const vx0 = -tx/sc, vy0 = -ty/sc, vw = vp.clientWidth/sc, vh = vp.clientHeight/sc;
+  if(x > vx0 && y > vy0 && x + w < vx0 + vw && y + h < vy0 + vh) return;
+  frameBox(x - 120, y - 120, w + 240, h + 240, 0.8);
+}));
+
+addEventListener('resize', apply);
+
+/* ---------------- case overlay ---------------- */
+const cs = $('#case'), cImg = $('#case-img'), strip = $('#case-strip');
+let cur = {id:null, i:0, imgs:[]}, lastFocus = null;
+
+function paint(){
+  const img = cur.imgs[cur.i];
+  cImg.src = img.src; cImg.alt = img.alt;
+  $$('#case-strip button').forEach((b,i)=> b.setAttribute('aria-current', String(i === cur.i)));
+}
+function openCase(id, i){
+  const m = META[id];
+  cur = {id, i, imgs: $$('#' + id + ' .paper img')};
+  $('#case-k').textContent = m.k;
+  $('#case-h').textContent = m.t;
+  $('#case-d').textContent = m.d;
+  strip.innerHTML = '';
+  cur.imgs.forEach((im, n)=>{
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.innerHTML = '<img src="' + im.src + '" alt="">';
+    b.setAttribute('aria-label', 'Piece ' + (n+1) + ' of ' + cur.imgs.length);
+    b.addEventListener('click', ()=>{ cur.i = n; paint(); });
+    strip.append(b);
+  });
+  paint();
+  lastFocus = document.activeElement;
+  cs.hidden = false; cs.classList.add('on'); root.classList.add('case');
+  $('#cClose').focus();
+}
+function closeCase(){
+  cs.classList.remove('on'); cs.hidden = true; root.classList.remove('case');
+  lastFocus?.focus();
+}
+function hop(d){ cur.i = (cur.i + d + cur.imgs.length) % cur.imgs.length; paint(); }
+
+$$('.paper').forEach(btn => btn.addEventListener('click', e=>{
+  if(floorMode() && moved > 6){ e.preventDefault(); return; }
+  openCase(btn.dataset.brand, +btn.dataset.i);
+}));
+$('#cClose').addEventListener('click', closeCase);
+$('#cPrev').addEventListener('click', ()=> hop(-1));
+$('#cNext').addEventListener('click', ()=> hop(1));
+cs.addEventListener('click', e=>{ if(e.target === cs) closeCase(); });
+addEventListener('keydown', e=>{
+  if(cs.hidden) return;
+  if(e.key === 'Escape') closeCase();
+  if(e.key === 'ArrowLeft') hop(-1);
+  if(e.key === 'ArrowRight') hop(1);
+  if(e.key === 'Tab'){
+    const f = $$('button, a', cs).filter(b => b.offsetParent !== null);
+    const first = f[0], last = f[f.length - 1];
+    if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+    else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+  }
+});
+
+/* ---------------- start on MyLegacy ---------------- */
+if(floorMode()){
+  requestAnimationFrame(()=>{
+    const b = boxOf(clusters[0]);
+    const w = vp.clientWidth, h = vp.clientHeight;
+    const fit = Math.min(w / (b.w + 80), h / (b.h + 340)) * 0.9;
+    if(w < 860){
+      sc = clampS(Math.max(fit, w / 1050));
+      const f = boxOf($('#' + clusters[0].id + ' .piece'));
+      tx = w/2 - (b.x + f.x + f.w/2) * sc;
+      ty = h/2 - (b.y + f.y + f.h/2) * sc;
+    }else{
+      sc = clampS(fit);
+      tx = w/2 - (b.x + b.w/2) * sc;
+      ty = h/2 - (b.y - 300 + (b.h + 340)/2) * sc;
+    }
+    apply();
+  });
+  if(matchMedia('(hover: none)').matches)
+    hint.textContent = 'Drag to move around — pinch to zoom';
+  setTimeout(()=> hint.classList.add('gone'), 9000);
+}
 </script>
 </body>
 </html>

@@ -1,0 +1,413 @@
+[
+ {
+  "id": "mylegacy",
+  "kind": "Creator platform",
+  "title": "MyLegacy",
+  "desc": "Unofficial concept pack for MyLegacy Management. Logo and colours redrawn from their website; tagline is theirs. Not commissioned.",
+  "pieces": [
+   {
+    "src": "img/mylegacy/MyLegacy_Thumb_Creator.jpg",
+    "w": 1280,
+    "h": 720,
+    "alt": "MyLegacy: Thumb Creator",
+    "cap": "Thumb Creator"
+   },
+   {
+    "src": "img/mylegacy/MyLegacy_Promo_BuiltByCreators.jpg",
+    "w": 1080,
+    "h": 1080,
+    "alt": "MyLegacy: Promo BuiltByCreators",
+    "cap": "Promo BuiltByCreators"
+   },
+   {
+    "src": "img/mylegacy/MyLegacy_Carousel_Cover.jpg",
+    "w": 1080,
+    "h": 1350,
+    "alt": "MyLegacy: Carousel Cover",
+    "cap": "Carousel Cover"
+   }
+  ]
+ },
+ {
+  "id": "signaldesk",
+  "kind": "Tech creator channel",
+  "title": "SignalDesk",
+  "desc": "Concept channel. Thumbnails, identity, banner and social set built around one real photo per piece and a black and gold palette.",
+  "pieces": [
+   {
+    "src": "img/signaldesk/SignalDesk_Thumb_Authority.jpg",
+    "w": 1280,
+    "h": 720,
+    "alt": "SignalDesk: Thumb Authority",
+    "cap": "Thumb Authority"
+   },
+   {
+    "src": "img/signaldesk/SignalDesk_Thumb_Curiosity.jpg",
+    "w": 1280,
+    "h": 720,
+    "alt": "SignalDesk: Thumb Curiosity",
+    "cap": "Thumb Curiosity"
+   },
+   {
+    "src": "img/signaldesk/SignalDesk_Thumb_Story.jpg",
+    "w": 1280,
+    "h": 720,
+    "alt": "SignalDesk: Thumb Story",
+    "cap": "Thumb Story"
+   },
+   {
+    "src": "img/signaldesk/SignalDesk_Banner.jpg",
+    "w": 1600,
+    "h": 900,
+    "alt": "SignalDesk: Banner",
+    "cap": "Banner"
+   },
+   {
+    "src": "img/signaldesk/SignalDesk_Logo.jpg",
+    "w": 800,
+    "h": 800,
+    "alt": "SignalDesk: Logo",
+    "cap": "Logo"
+   },
+   {
+    "src": "img/signaldesk/SignalDesk_Promo_JustDropped.jpg",
+    "w": 1080,
+    "h": 1350,
+    "alt": "SignalDesk: Promo JustDropped",
+    "cap": "Promo JustDropped"
+   },
+   {
+    "src": "img/signaldesk/SignalDesk_Promo_ShipPoster.jpg",
+    "w": 1080,
+    "h": 1350,
+    "alt": "SignalDesk: Promo ShipPoster",
+    "cap": "Promo ShipPoster"
+   },
+   {
+    "src": "img/signaldesk/SignalDesk_Promo_ThisWeek_Story.jpg",
+    "w": 900,
+    "h": 1600,
+    "alt": "SignalDesk: Promo ThisWeek Story",
+    "cap": "Promo ThisWeek Story"
+   }
+  ]
+ },
+ {
+  "id": "nullpoint",
+  "kind": "Gaming channel",
+  "title": "NullPoint",
+  "desc": "Concept channel. A ring-and-dot mark, heavy grotesk type and one red accent.",
+  "pieces": [
+   {
+    "src": "img/nullpoint/NullPoint_Thumb_YoureWrong.jpg",
+    "w": 1280,
+    "h": 720,
+    "alt": "NullPoint: Thumb YoureWrong",
+    "cap": "Thumb YoureWrong"
+   },
+   {
+    "src": "img/nullpoint/NullPoint_Thumb_Glitch.jpg",
+    "w": 1280,
+    "h": 720,
+    "alt": "NullPoint: Thumb Glitch",
+    "cap": "Thumb Glitch"
+   },
+   {
+    "src": "img/nullpoint/NullPoint_Thumb_LostOnPurpose.jpg",
+    "w": 1280,
+    "h": 720,
+    "alt": "NullPoint: Thumb LostOnPurpose",
+    "cap": "Thumb LostOnPurpose"
+   },
+   {
+    "src": "img/nullpoint/NullPoint_Banner.jpg",
+    "w": 1600,
+    "h": 900,
+    "alt": "NullPoint: Banner",
+    "cap": "Banner"
+   },
+   {
+    "src": "img/nullpoint/NullPoint_Logo.jpg",
+    "w": 800,
+    "h": 800,
+    "alt": "NullPoint: Logo",
+    "cap": "Logo"
+   }
+  ]
+ },
+ {
+  "id": "lecturenotes",
+  "kind": "Study channel",
+  "title": "Lecture Notes",
+  "desc": "Concept channel. Paper, ink and a highlighter stroke that marks the key word, the way students mark notes.",
+  "pieces": [
+   {
+    "src": "img/lecturenotes/LectureNotes_Thumb_Method.jpg",
+    "w": 1280,
+    "h": 720,
+    "alt": "Lecture Notes: Thumb Method",
+    "cap": "Thumb Method"
+   },
+   {
+    "src": "img/lecturenotes/LectureNotes_Thumb_Mistakes.jpg",
+    "w": 1280,
+    "h": 720,
+    "alt": "Lecture Notes: Thumb Mistakes",
+    "cap": "Thumb Mistakes"
+   },
+   {
+    "src": "img/lecturenotes/LectureNotes_Thumb_Study.jpg",
+    "w": 1280,
+    "h": 720,
+    "alt": "Lecture Notes: Thumb Study",
+    "cap": "Thumb Study"
+   },
+   {
+    "src": "img/lecturenotes/LectureNotes_Banner.jpg",
+    "w": 1600,
+    "h": 900,
+    "alt": "Lecture Notes: Banner",
+    "cap": "Banner"
+   },
+   {
+    "src": "img/lecturenotes/LectureNotes_Logo.jpg",
+    "w": 800,
+    "h": 800,
+    "alt": "Lecture Notes: Logo",
+    "cap": "Logo"
+   }
+  ]
+ },
+ {
+  "id": "sola",
+  "kind": "Restaurant, Lagos",
+  "title": "Sola & Saffron",
+  "desc": "Concept brand for a modern Nigerian kitchen. Menu, logo and a dish-of-the-day post.",
+  "pieces": [
+   {
+    "src": "img/sola/SOLA_Menu_A4.jpg",
+    "w": 1131,
+    "h": 1600,
+    "alt": "Sola & Saffron: Menu A4",
+    "cap": "Menu A4"
+   },
+   {
+    "src": "img/sola/SOLA_Social_Post.jpg",
+    "w": 1080,
+    "h": 1350,
+    "alt": "Sola & Saffron: Social Post",
+    "cap": "Social Post"
+   },
+   {
+    "src": "img/sola/SOLA_Logo.jpg",
+    "w": 800,
+    "h": 800,
+    "alt": "Sola & Saffron: Logo",
+    "cap": "Logo"
+   }
+  ]
+ },
+ {
+  "id": "forme",
+  "kind": "Fashion",
+  "title": "FORME",
+  "desc": "Concept brand. Hang tag designed and applied to a garment photo, plus a product post.",
+  "pieces": [
+   {
+    "src": "img/forme/FORME_HangTag.jpg",
+    "w": 1131,
+    "h": 1600,
+    "alt": "FORME: HangTag",
+    "cap": "HangTag"
+   },
+   {
+    "src": "img/forme/FORME_Social_Post.jpg",
+    "w": 1080,
+    "h": 1350,
+    "alt": "FORME: Social Post",
+    "cap": "Social Post"
+   },
+   {
+    "src": "img/forme/FORME_Logo.jpg",
+    "w": 800,
+    "h": 800,
+    "alt": "FORME: Logo",
+    "cap": "Logo"
+   }
+  ]
+ },
+ {
+  "id": "morrow",
+  "kind": "Real estate",
+  "title": "Morrow & Co.",
+  "desc": "Concept brand. Property flyer and listing post for a fictional house.",
+  "pieces": [
+   {
+    "src": "img/morrow/MORROW_Property_Flyer_A4.jpg",
+    "w": 1131,
+    "h": 1600,
+    "alt": "Morrow & Co.: Property Flyer A4",
+    "cap": "Property Flyer A4"
+   },
+   {
+    "src": "img/morrow/MORROW_Social_Post.jpg",
+    "w": 1080,
+    "h": 1350,
+    "alt": "Morrow & Co.: Social Post",
+    "cap": "Social Post"
+   },
+   {
+    "src": "img/morrow/MORROW_Logo.jpg",
+    "w": 800,
+    "h": 800,
+    "alt": "Morrow & Co.: Logo",
+    "cap": "Logo"
+   }
+  ]
+ },
+ {
+  "id": "pace",
+  "kind": "Fintech app",
+  "title": "Pace",
+  "desc": "Concept brand. App home screen designed and placed on a phone photo, plus a launch post.",
+  "pieces": [
+   {
+    "src": "img/pace/PACE_Onboarding_Banner.jpg",
+    "w": 1200,
+    "h": 628,
+    "alt": "Pace: Onboarding Banner",
+    "cap": "Onboarding Banner"
+   },
+   {
+    "src": "img/pace/PACE_Social_Post.jpg",
+    "w": 1080,
+    "h": 1350,
+    "alt": "Pace: Social Post",
+    "cap": "Social Post"
+   },
+   {
+    "src": "img/pace/PACE_Logo.jpg",
+    "w": 800,
+    "h": 800,
+    "alt": "Pace: Logo",
+    "cap": "Logo"
+   }
+  ]
+ },
+ {
+  "id": "pulse",
+  "kind": "Fitness gym",
+  "title": "Pulse 27",
+  "desc": "Concept brand. Weekly class schedule and an intro-pass post.",
+  "pieces": [
+   {
+    "src": "img/pulse/PULSE_Class_Schedule_A4.jpg",
+    "w": 1131,
+    "h": 1600,
+    "alt": "Pulse 27: Class Schedule A4",
+    "cap": "Class Schedule A4"
+   },
+   {
+    "src": "img/pulse/PULSE_Social_Post.jpg",
+    "w": 1080,
+    "h": 1350,
+    "alt": "Pulse 27: Social Post",
+    "cap": "Social Post"
+   },
+   {
+    "src": "img/pulse/PULSE_Logo.jpg",
+    "w": 800,
+    "h": 800,
+    "alt": "Pulse 27: Logo",
+    "cap": "Logo"
+   }
+  ]
+ },
+ {
+  "id": "serein",
+  "kind": "Skin studio",
+  "title": "Serein",
+  "desc": "Concept brand. Treatment menu with a labelled product shot, and a product post.",
+  "pieces": [
+   {
+    "src": "img/serein/SEREIN_Price_List_A4.jpg",
+    "w": 1131,
+    "h": 1600,
+    "alt": "Serein: Price List A4",
+    "cap": "Price List A4"
+   },
+   {
+    "src": "img/serein/SEREIN_Social_Post.jpg",
+    "w": 1080,
+    "h": 1350,
+    "alt": "Serein: Social Post",
+    "cap": "Social Post"
+   },
+   {
+    "src": "img/serein/SEREIN_Logo.jpg",
+    "w": 800,
+    "h": 800,
+    "alt": "Serein: Logo",
+    "cap": "Logo"
+   }
+  ]
+ },
+ {
+  "id": "openfield",
+  "kind": "Education centre",
+  "title": "Openfield Learning",
+  "desc": "Concept brand. Admissions flyer and an open-day post.",
+  "pieces": [
+   {
+    "src": "img/openfield/OPENFIELD_Admissions_Flyer_A4.jpg",
+    "w": 1131,
+    "h": 1600,
+    "alt": "Openfield Learning: Admissions Flyer A4",
+    "cap": "Admissions Flyer A4"
+   },
+   {
+    "src": "img/openfield/OPENFIELD_Social_Post.jpg",
+    "w": 1080,
+    "h": 1350,
+    "alt": "Openfield Learning: Social Post",
+    "cap": "Social Post"
+   },
+   {
+    "src": "img/openfield/OPENFIELD_Logo.jpg",
+    "w": 800,
+    "h": 800,
+    "alt": "Openfield Learning: Logo",
+    "cap": "Logo"
+   }
+  ]
+ },
+ {
+  "id": "afterhours",
+  "kind": "Event",
+  "title": "After Hours Lagos",
+  "desc": "Concept event. Ticket, story post and logo. Event details are fictional.",
+  "pieces": [
+   {
+    "src": "img/afterhours/AFTER_HOURS_Social_Story.jpg",
+    "w": 900,
+    "h": 1600,
+    "alt": "After Hours Lagos: HOURS Social Story",
+    "cap": "HOURS Social Story"
+   },
+   {
+    "src": "img/afterhours/AFTER_HOURS_Ticket.jpg",
+    "w": 1600,
+    "h": 608,
+    "alt": "After Hours Lagos: HOURS Ticket",
+    "cap": "HOURS Ticket"
+   },
+   {
+    "src": "img/afterhours/AFTER_HOURS_Logo.jpg",
+    "w": 800,
+    "h": 800,
+    "alt": "After Hours Lagos: HOURS Logo",
+    "cap": "HOURS Logo"
+   }
+  ]
+ }
+]
