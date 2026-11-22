@@ -3,7 +3,7 @@
   "id": "creatorspec",
   "kind": "Spec work",
   "title": "Creator Thumbnails",
-  "desc": "Unpaid spec work for creators on MyLegacy Management’s roster, researched from their public channels. K.Overlegen makes Minecraft Epic Fight mod showcases, so his kit follows his own “This Mod Adds” titles and his tagline. Chris2003 makes FNAF and Sonic videos, so his pieces live inside a night shift camera feed. Every scene is drawn from scratch with no game footage or franchise characters. Not commissioned.",
+  "desc": "Unpaid spec work for creators on MyLegacy Management’s roster, researched from their public channels. K.Overlegen makes Minecraft Epic Fight mod showcases, so his kit follows his own “This Mod Adds” titles and his tagline. Chris2003 makes FNAF and Sonic videos, so his pieces live inside a night shift camera feed. The Snackd post is built on the shop’s own lines, “Unbox the unexpected!” and “Snacks of the World”. Every scene is drawn from scratch with no game footage or franchise characters. Not commissioned.",
   "pieces": [
    {
     "src": "img/creatorspec/KOverlegen_Thumb_Awakened.jpg",
@@ -39,6 +39,13 @@
     "h": 1920,
     "alt": "K.Overlegen: vertical Shorts cover reading This Mod Makes Combat Insane",
     "cap": "K.Overlegen Shorts cover"
+   },
+   {
+    "src": "img/creatorspec/Snackd_Post_Unbox.jpg",
+    "w": 1080,
+    "h": 1350,
+    "alt": "Snackd: yellow sunburst post with a pink mystery box and flying sweets, headline Unbox the Unexpected!",
+    "cap": "Snackd post, Unbox the Unexpected"
    },
    {
     "src": "img/creatorspec/Mighty_Stream_Banner.jpg",
