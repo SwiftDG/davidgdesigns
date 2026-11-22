@@ -1,5 +1,41 @@
 [
  {
+  "id": "creatorspec",
+  "kind": "Spec work",
+  "title": "Creator Thumbnails",
+  "desc": "Unpaid spec work for creators on MyLegacy Management’s roster, researched from their public channels. K.Overlegen makes Minecraft Epic Fight mod showcases, so his thumbnail follows his own “This Mod Adds” titles. Chris2003 makes FNAF and Sonic videos, so his is a night shift camera feed. Every scene is drawn from scratch with no game footage or franchise characters. Not commissioned.",
+  "pieces": [
+   {
+    "src": "img/creatorspec/KOverlegen_Thumb_DevilTrigger.jpg",
+    "w": 1280,
+    "h": 720,
+    "alt": "K.Overlegen: Minecraft Epic Fight thumbnail, a voxel swordsman in front of glowing Devil Trigger title",
+    "cap": "K.Overlegen thumbnail, Devil Trigger"
+   },
+   {
+    "src": "img/creatorspec/Chris2003_Thumb_Night5.jpg",
+    "w": 1280,
+    "h": 720,
+    "alt": "Chris2003: security camera view of a dark corridor with two eyes in the doorway, clock reads 5:59 AM",
+    "cap": "Chris2003 thumbnail, Night 5"
+   },
+   {
+    "src": "img/creatorspec/Mighty_Stream_Banner.jpg",
+    "w": 1600,
+    "h": 480,
+    "alt": "Mighty: stream banner with bold wordmark over a gaming arena",
+    "cap": "Mighty stream banner"
+   },
+   {
+    "src": "img/creatorspec/Mighty_Profile_Picture.jpg",
+    "w": 800,
+    "h": 800,
+    "alt": "Mighty: orange profile picture with a black M monogram",
+    "cap": "Mighty profile picture"
+   }
+  ]
+ },
+ {
   "id": "mylegacy",
   "kind": "Creator platform",
   "title": "MyLegacy",
