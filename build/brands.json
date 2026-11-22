@@ -3,14 +3,14 @@
   "id": "creatorspec",
   "kind": "Spec work",
   "title": "Creator Thumbnails",
-  "desc": "Unpaid spec work for creators on MyLegacy Management’s roster, researched from their public channels. K.Overlegen makes Minecraft Epic Fight mod showcases, so his thumbnail follows his own “This Mod Adds” titles. Chris2003 makes FNAF and Sonic videos, so his is a night shift camera feed. Every scene is drawn from scratch with no game footage or franchise characters. Not commissioned.",
+  "desc": "Unpaid spec work for creators on MyLegacy Management’s roster, researched from their public channels. K.Overlegen makes Minecraft Epic Fight mod showcases, so his kit follows his own “This Mod Adds” titles and his tagline. Chris2003 makes FNAF and Sonic videos, so his pieces live inside a night shift camera feed. Every scene is drawn from scratch with no game footage or franchise characters. Not commissioned.",
   "pieces": [
    {
-    "src": "img/creatorspec/KOverlegen_Thumb_DevilTrigger.jpg",
+    "src": "img/creatorspec/KOverlegen_Thumb_Awakened.jpg",
     "w": 1280,
     "h": 720,
-    "alt": "K.Overlegen: Minecraft Epic Fight thumbnail, a voxel swordsman in front of glowing Devil Trigger title",
-    "cap": "K.Overlegen thumbnail, Devil Trigger"
+    "alt": "K.Overlegen: Minecraft Epic Fight thumbnail, a voxel swordsman with a glowing blue blade in front of the word Awakened",
+    "cap": "K.Overlegen thumbnail, Awakened"
    },
    {
     "src": "img/creatorspec/Chris2003_Thumb_Night5.jpg",
@@ -18,6 +18,27 @@
     "h": 720,
     "alt": "Chris2003: security camera view of a dark corridor with two eyes in the doorway, clock reads 5:59 AM",
     "cap": "Chris2003 thumbnail, Night 5"
+   },
+   {
+    "src": "img/creatorspec/KOverlegen_Channel_Banner.jpg",
+    "w": 1920,
+    "h": 1080,
+    "alt": "K.Overlegen: YouTube channel banner reading King Overlegen, Everyone’s Favorite Minecraft Warrior",
+    "cap": "K.Overlegen channel banner"
+   },
+   {
+    "src": "img/creatorspec/Chris2003_Stream_StartingSoon.jpg",
+    "w": 1920,
+    "h": 1080,
+    "alt": "Chris2003: stream starting soon screen on a night security camera feed",
+    "cap": "Chris2003 stream starting screen"
+   },
+   {
+    "src": "img/creatorspec/KOverlegen_Shorts_Cover.jpg",
+    "w": 1080,
+    "h": 1920,
+    "alt": "K.Overlegen: vertical Shorts cover reading This Mod Makes Combat Insane",
+    "cap": "K.Overlegen Shorts cover"
    },
    {
     "src": "img/creatorspec/Mighty_Stream_Banner.jpg",

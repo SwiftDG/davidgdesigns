@@ -500,7 +500,8 @@ function startView(){
   const w = vp.clientWidth, h = vp.clientHeight;
   if(w < 2 || h < 2) return false;
   const b = boxOf(clusters[0]);
-  const fit = Math.min(w / (b.w + 80), h / (b.h + 340)) * 0.9;
+  const bar = 72;                       /* keep the heading clear of the fixed top bar */
+  const fit = Math.min(w / (b.w + 80), (h - bar) / (b.h + 340)) * 0.9;
   if(w < 860){
     sc = clampS(Math.max(fit, w / 1050));
     const f = boxOf($('#' + clusters[0].id + ' .piece'));
@@ -509,7 +510,7 @@ function startView(){
   }else{
     sc = clampS(fit);
     tx = w/2 - (b.x + b.w/2) * sc;
-    ty = h/2 - (b.y - 300 + (b.h + 340)/2) * sc;
+    ty = bar + (h - bar)/2 - (b.y - 300 + (b.h + 340)/2) * sc;
   }
   started = true;
   apply();
